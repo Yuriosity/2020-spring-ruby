@@ -1,6 +1,9 @@
 require_relative 'auto'
+require 'csv'
 require_relative 'fleet'
-a = Auto.new("terse","terse",4,5)
-b = Auto.new("terse","terse",4,5)
-c = Auto.new("terse","terse",4,5)
-d = Fleet.new()
+cars = Fleet.new
+CSV.foreach("cars.csv", headers: true) do |row|
+    car = Auto.new(row['Brand'], row['Model'], Integer(row['Manifacture_year']), Float(row['Gasoline_consumption']))
+    cars.add(car)
+end
+cars.to_s

@@ -1,8 +1,8 @@
 class Auto
-    attr_reader :brand
-    attr_reader :model
-    attr_reader :manifacture_year 
-    attr_reader :gasoline_consumption
+    attr_accessor :brand
+    attr_accessor :model
+    attr_accessor :manifacture_year 
+    attr_accessor :gasoline_consumption
     def initialize(a,b,c,d)
         @brand = a
         @model = b
