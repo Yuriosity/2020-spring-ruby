@@ -5,7 +5,7 @@ def main
 end
 
 def input_data
-    [12, -56, 77, 88]
+    [-1, 2, -3, 5]
 end
 
 def print_array(array)
@@ -15,10 +15,10 @@ def print_array(array)
     puts ""
 end
 
-def print_my(array, amount)
-    print "Array with positions: "
+def print_my(array, count)
+    print "Positions: "
     print_array(array)
-    print "How many times sign has been changed: ", amount
+    print "Change: ", amount
     puts ""
 end
 
